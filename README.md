@@ -1,4 +1,3 @@
-# gettingandcleaningdata
 # Final project for getting and cleaning data course
 # In the script, we load the libraries used (dplyr and data.table)
 # Then we create a directory for our dataset if one does not yet exist
