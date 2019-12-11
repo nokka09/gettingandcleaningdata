@@ -1,4 +1,4 @@
-# Load dplyr
+# Load packages used
 library(dplyr)
 library(data.table)
 # First we create a directory for our dataset
