@@ -1,7 +1,7 @@
 # Load dplyr
 library(dplyr)
 library(data.table)
-# First we download and unzip the dataset
+# First we create a directory for our dataset
 if(!file.exists("./dataset")){dir.create("./dataset")}
 # Now we download the file for the dataset
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -55,5 +55,4 @@ mean_std_dev <- data.table(mean_std_dev)
 
 tidyData <- aggregate(. ~Subject + Activity, mean_std_dev, mean)
 tidyData <- tidyData[order(tidyData$Subject,tidyData$Activity),]
-write.table(tidyData, file = "TidyData.txt", row.names = FALSE)
-
+write.table(tidyData, file = "TidyData.txt", row.name = FALSE)
